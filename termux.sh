@@ -1,5 +1,5 @@
 # install neovim prerequisites
-pkg install openssl cmake unzip wget gettext curl
+pkg install openssl cmake unzip wget gettext curl ripgrep
 
 # clone neovim repo
 git clone https://github.com/neovim/neovim $HOME/dev/neovim
