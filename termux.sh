@@ -1,1 +1,1 @@
-pkg install openssl cmake gamek sha unzip wget gettext curl
+pkg install openssl cmake gmake sha unzip wget gettext curl
