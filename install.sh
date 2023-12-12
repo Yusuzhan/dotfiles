@@ -26,4 +26,8 @@ fi
 
 # link neovim settings
 echo "setting neovim"
+if [ -d $HOME/.config ]; then
+else
+    mkdir $HOME/.config
+fi
 ln -sf nvim $HOME/.config/nvim 
