@@ -29,4 +29,5 @@ echo "setting neovim"
 if ! [ -d $HOME/.config ]; then
     mkdir $HOME/.config
 fi
-pwd | ln -sf $?/nvim $HOME/.config/nvim 
+ 
+ln -sf $PWD/nvim $HOME/.config/nvim 
