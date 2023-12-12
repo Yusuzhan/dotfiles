@@ -30,4 +30,4 @@ if ! [ -d $HOME/.config ]; then
     mkdir $HOME/.config
 fi
  
-ln -sf $PWD/nvim $HOME/.config/nvim 
+ln -sf ./nvim $HOME/.config/nvim 
