@@ -23,3 +23,7 @@ else
     echo '[zsh-syntax-highlighting] start installing'
 		git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 fi
+
+# link neovim settings
+echo "setting neovim"
+ln -sf nvim $HOME/.config/nvim 
