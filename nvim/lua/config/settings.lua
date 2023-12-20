@@ -14,6 +14,7 @@ vim.opt.tabstop = 2
 -- vim.opt.autoindent = true
 -- vim.opt.smartindent = true
 vim.opt.swapfile = false
+vim.opt.guicursor = ""
 
 vim.api.nvim_set_hl(0, "LineNrAbove", {fg = "#8be9fd"})
 vim.api.nvim_set_hl(0, "CursorLineNr", {fg = "#50fa7b"})
