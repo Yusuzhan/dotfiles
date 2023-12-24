@@ -1,4 +1,18 @@
 #!/bin/bash
+os=""
+unameOut="$(uname -a)"
+if [[ "$unameOut" == *"Linux"* ]]; then
+				osRelease="$(cat /etc/os-release)"
+				if [[ "$osRelease" == *"Arch"* ]]; then
+								os="Arch"
+				elif [[ "$osRelease" == *"Ubuntu"* ]]; then
+								os="Ubuntu"
+				fi
+elif [[ "$unameOut" == *"Darwin"* ]]; then
+				os="macos"
+fi
+
+echo "OS: $os"
 
 # install oh-my-zsh
 if [ -d $HOME/.oh-my-zsh ]; then
@@ -32,4 +46,3 @@ fi
  
 ln -sf $HOME/dotfiles/nvim $HOME/.config/nvim 
 
-# 
