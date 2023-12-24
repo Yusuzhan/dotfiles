@@ -46,3 +46,7 @@ fi
  
 ln -sf $HOME/dotfiles/nvim $HOME/.config/nvim 
 
+# link .zshrc
+echo "setting zshrc"
+ln -sf $HOME/dotfiles/zshrc/.zshrc $HOME/.zshrc
+

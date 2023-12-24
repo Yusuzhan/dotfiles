@@ -71,9 +71,9 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-				git
-				zsh-autosuggestions
-				zsh-syntax-highlighting
+	git
+	zsh-autosuggestions
+	zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -103,49 +103,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# nvim
-alias vi=nvim
-alias vim=nvim
-
-# Proxy Setting
-alias v2ray="
-  export http_proxy=http://127.0.0.1:1087;
-  export https_proxy=http://127.0.0.1:1087;
-  export all_proxy=http://127.0.0.1:1087;
-  export no_proxy=http://127.0.0.1:1087;
-  export HTTP_PROXY=http://127.0.0.1:1087;
-  export HTTPS_PROXY=http://127.0.0.1:1087;
-  export ALL_PROXY=http://127.0.0.1:1087;
-  export NO_PROXY=http://127.0.0.1:1087;
-"
-
-alias unproxy="
-  unset http_proxy;
-  unset http_proxy;
-  unset https_proxy;
-  unset all_proxy;
-  unset no_proxy;
-  unset HTTP_PROXY;
-  unset HTTPS_PROXY;
-  unset ALL_PROXY;
-  unset NO_PROXY;
-"
-
-# dev tools setup
-export PATH="$PATH:$HOME/dev/flutter/bin"
-export PATH="$PATH:/Users/qxz3lb2/Library/Android/sdk/platform-tools"
-
-# flutter cn mirror
-alias fluttercn="
-export PUB_HOSTED_URL="https://pub.flutter-io.cn"
-export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
-"
-
-source ~/dotfiles/zshrc/bmw.zshrc
-
-
-export BMWAF_NUGET_USER=yunfei-li
-export BMWAF_NUGET_PASS=AKCp8krKoLeGeuZVHZQd8XUNbwSVmNgqdkg2LztECMLstZrHyzaQSh5GVP6DKRoGfp8EUBToA
-export ANDROID_ARTIFACTORY_USER=yunfei-li
-export ANDROID_ARTIFACTORY_PW=AKCp8krKoLeGeuZVHZQd8XUNbwSVmNgqdkg2LztECMLstZrHyzaQSh5GVP6DKRoGfp8EUBToA
