@@ -15,7 +15,9 @@ vim.opt.tabstop = 2
 -- vim.opt.smartindent = true
 vim.opt.swapfile = false
 vim.opt.guicursor = ""
-
+-- use system clipboard
+vim.opt.clipboard = "unnamedplus"
+-- Line number color scheme
 vim.api.nvim_set_hl(0, "LineNrAbove", {fg = "#8be9fd"})
 vim.api.nvim_set_hl(0, "CursorLineNr", {fg = "#50fa7b"})
 vim.api.nvim_set_hl(0, "LineNrBelow", {fg = "#bd93f9"})
