@@ -149,6 +149,7 @@ require("lazy").setup({
 	-- lsp progress
 	{
 		"j-hui/fidget.nvim",
+		lazy = true,
 		opts = {
 			-- options
 		},
@@ -164,4 +165,14 @@ require("lazy").setup({
 			'nvim-tree/nvim-web-devicons',
 		}
 	},
+	-- markdown preview
+	{
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		build = "cd app && yarn install",
+		init = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	}
 })
