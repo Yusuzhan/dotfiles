@@ -18,6 +18,7 @@ export HTTPS_PROXY="${HTTP_PROXY}"
 export http_proxy="${HTTP_PROXY}"
 export https_proxy="${HTTP_PROXY}"
 export no_proxy="localhost,127.0.0.1,.cn.sub,.bmwgroup.net"
+mv ~/.ssh/config.bak ~/.ssh/config
 "
 
 alias cocopods_bmw="
