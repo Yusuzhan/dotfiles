@@ -50,3 +50,7 @@ ln -sf $HOME/dotfiles/nvim $HOME/.config/nvim
 echo "setting zshrc"
 ln -sf $HOME/dotfiles/zshrc/.zshrc $HOME/.zshrc
 
+# link alacritty config
+echo "setting Alacritty"
+mkdir -p $HOME/.config/alacritty/
+ln -sf $HOME/dotfiles/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
