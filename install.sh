@@ -59,3 +59,8 @@ ln -sf $HOME/dotfiles/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.
 echo "setting tmux"
 # ln -sf $HOME/dotfiles/tmux.conf/.tmux.conf $HOME/.tmux.conf
 tmux source $HOME/dotfiles/tmux.conf/.tmux.conf
+
+# link sxhkd config
+echo "setting sxhkd"
+mkdir -p $HOME/.config/sxhkd
+ln -sf $HOME/dotfiles/sxhkd/sxhkdrc $HOME/.config/sxhkd/sxhkdrc

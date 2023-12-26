@@ -1,0 +1,13 @@
+# Raise volume
+XF86AudioRaiseVolume
+  pactl set-sink-volume @DEFAULT_SINK@ +2%; \
+	volume=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}'); \
+	xsetroot -name "$volume"
+ 
+# Lover volume
+XF86AudioLowerVolume
+  pactl set-sink-volume @DEFAULT_SINK@ -2%
+ 
+# Mute
+XF86AudioMute
+  pactl set-sink-mute @DEFAULT_SINK@ toggle
