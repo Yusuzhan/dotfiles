@@ -54,3 +54,8 @@ ln -sf $HOME/dotfiles/zshrc/.zshrc $HOME/.zshrc
 echo "setting Alacritty"
 mkdir -p $HOME/.config/alacritty/
 ln -sf $HOME/dotfiles/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
+
+# link tmux config
+echo "setting tmux"
+# ln -sf $HOME/dotfiles/tmux.conf/.tmux.conf $HOME/.tmux.conf
+tmux source $HOME/dotfiles/tmux.conf/.tmux.conf
