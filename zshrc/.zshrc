@@ -103,3 +103,32 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+################################################################################
+################################ My Settings ###################################
+################################################################################
+
+alias vi=nvim
+alias vim=nvim
+
+alias v2ray="
+V2RAY_URL=socks5://127.0.0.1:1080
+export http_proxy=${V2RAY_URL}
+export https_proxy=${V2RAY_URL}
+export HTTP_PROXY=sock://${V2RAY_URL}
+export HTTPS_PROXY="${V2RAY_URL}"
+export http_proxy="${V2RAY_URL}"
+export https_proxy="${V2RAY_URL}"
+export no_proxy="localhost,127.0.0.1,.cn.sub,.bmwgroup.net"
+mv ~/.ssh/config ~/.ssh/config.bak
+"
+
+alias unproxy="
+unset http_proxy
+unset https_proxy
+unset HTTP_PROXY
+unset HTTPS_PROXY
+"
+
+source ~/dotfiles/zshrc/bmw.zshrc
+
