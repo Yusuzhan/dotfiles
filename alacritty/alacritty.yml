@@ -2,7 +2,7 @@ font:
   size: 14
   normal:
     family: IosevkaTerm Nerd Font Propo
-    style: Regular
+    style: SemiBold
   bold:
     style: Bold
   builtin_box_drawing: true
