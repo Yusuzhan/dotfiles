@@ -115,7 +115,7 @@ alias v2ray="
 V2RAY_URL=socks5://127.0.0.1:1080
 export http_proxy=${V2RAY_URL}
 export https_proxy=${V2RAY_URL}
-export HTTP_PROXY=sock://${V2RAY_URL}
+export HTTP_PROXY=${V2RAY_URL}
 export HTTPS_PROXY="${V2RAY_URL}"
 export http_proxy="${V2RAY_URL}"
 export https_proxy="${V2RAY_URL}"
@@ -130,5 +130,4 @@ unset HTTP_PROXY
 unset HTTPS_PROXY
 "
 
-source ~/dotfiles/zshrc/bmw.zshrc
-
+source ~/bmw_bash_scripts/bmw.zshrc
