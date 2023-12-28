@@ -101,7 +101,7 @@ require("lazy").setup({
 		config = function()
 			require('telescope').setup {
 				defaults = {
-					layout_strategy = "left",
+					-- layout_strategy = "left",
 					layout_config = {
 						preview_cutoff = 1, -- Preview should always show (unless previewer = false)
 						width = function(_, max_columns, _)
