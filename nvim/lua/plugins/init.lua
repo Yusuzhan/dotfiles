@@ -100,6 +100,23 @@ require("lazy").setup({
 		dependencies = { 'nvim-lua/plenary.nvim' },
 		config = function()
 			require('telescope').setup {
+				defaults = {
+					layout_strategy = "left",
+					layout_config = {
+						preview_cutoff = 1, -- Preview should always show (unless previewer = false)
+						width = function(_, max_columns, _)
+							return math.min(max_columns, 80)
+						end,
+						height = function(_, _, max_lines)
+							return math.min(max_lines, 15)
+						end,
+					},
+				},
+				pickers = {
+					find_files = {
+						theme = "dropdown",
+					},
+				},
 				extensions = {
 					fzf = {
 						fuzzy = true, -- false will only do exact matching
