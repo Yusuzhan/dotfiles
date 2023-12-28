@@ -14,6 +14,9 @@ fi
 
 echo "OS: $os"
 
+DOTFILES_DIR="$HOME/dotfiles"
+CONFIG_DIR="$HOME/.config"
+
 # install oh-my-zsh
 if [ -d $HOME/.oh-my-zsh ]; then
     echo '[oh-my-zsh] already installed'
@@ -40,27 +43,32 @@ fi
 
 # link neovim settings
 echo "setting neovim"
-if ! [ -d $HOME/.config ]; then
-    mkdir $HOME/.config
+if ! [ -d $CONFIG_DIR ]; then
+    mkdir $CONFIG_DIR
 fi
  
-ln -sf $HOME/dotfiles/nvim $HOME/.config/nvim 
+ln -sf $DOTFILES_DIR/nvim $CONFIG_DIR/nvim 
 
 # link .zshrc
 echo "setting zshrc"
-ln -sf $HOME/dotfiles/zshrc/.zshrc $HOME/.zshrc
+ln -sf $DOTFILES_DIR/zshrc/.zshrc $HOME/.zshrc
 
 # link alacritty config
 echo "setting Alacritty"
-mkdir -p $HOME/.config/alacritty/
-ln -sf $HOME/dotfiles/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
+mkdir -p $CONFIG_DIR/alacritty/
+ln -sf $DOTFILES_DIR/alacritty/alacritty.toml $CONFIG_DIR/alacritty/alacritty.toml
 
 # link tmux config
 echo "setting tmux"
-# ln -sf $HOME/dotfiles/tmux.conf/.tmux.conf $HOME/.tmux.conf
-tmux source $HOME/dotfiles/tmux.conf/.tmux.conf
+# ln -sf $DOTFILES_DIR/tmux.conf/.tmux.conf $HOME/.tmux.conf
+tmux source $DOTFILES_DIR/tmux.conf/.tmux.conf
 
 # link sxhkd config
 echo "setting sxhkd"
-mkdir -p $HOME/.config/sxhkd
-ln -sf $HOME/dotfiles/sxhkd/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
+mkdir -p $CONFIG_DIR/sxhkd
+ln -sf $DOTFILES_DIR/sxhkd/sxhkdrc $CONFIG_DIR/sxhkd/sxhkdrc
+
+# link conky config
+echo "setting conky"
+mkdir -p $CONFIG_DIR/conky
+ln -sf $DOTFILES_DIR/conky/conky.conf $CONFIG_DIR/conky/conky.conf
