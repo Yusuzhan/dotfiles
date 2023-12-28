@@ -130,4 +130,8 @@ unset HTTP_PROXY
 unset HTTPS_PROXY
 "
 
+update() {
+				python3 $HOME/mynote/forcePush/github-cli.py update $0
+}
+
 source ~/bmw_bash_scripts/bmw.zshrc
