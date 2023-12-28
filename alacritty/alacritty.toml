@@ -1,0 +1,16 @@
+import = ["$HOME/dotfiles/alacritty/dracula.toml"]
+
+[colors.vi_mode_cursor]
+#cursor = "CellForeground"
+#text = "CellBackground"
+
+[font]
+builtin_box_drawing = true
+size = 14
+
+[font.bold]
+style = "Bold"
+
+[font.normal]
+family = "IosevkaTerm Nerd Font Propo"
+style = "SemiBold"
