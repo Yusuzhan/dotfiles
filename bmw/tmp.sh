@@ -1,9 +1,0 @@
-export HTTP_PROXY="qxz3lb2:publicstaticvoidmainString@proxy.cn.sub:8080"
-export HTTPS_PROXY=$HTTP_PROXY
-export http_proxy=$HTTP_PROXY
-export https_proxy=$HTTP_PROXY
-
-export BMWAF_NUGET_USER=yunfei-li
-export BMWAF_NUGET_PASS=AKCp8krKoLeGeuZVHZQd8XUNbwSVmNgqdkg2LztECMLstZrHyzaQSh5GVP6DKRoGfp8EUBToA
-export ANDROID_ARTIFACTORY_USER=yunfei-li
-export ANDROID_ARTIFACTORY_PW=AKCp8krKoLeGeuZVHZQd8XUNbwSVmNgqdkg2LztECMLstZrHyzaQSh5GVP6DKRoGfp8EUBToA
