@@ -10,6 +10,8 @@ M.config = function()
 	lspconfig.pylsp.setup {}
 	-- bash
 	lspconfig.bashls.setup {}
+	-- clangd
+	lspconfig.clangd.setup {}
 
 	lspconfig.dartls.setup {
 		cmd = { "dart", 'language-server', '--protocol=lsp' }
