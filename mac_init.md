@@ -27,6 +27,7 @@ brew install fd
 brew install lazygit
 brew install tmux
 brew install neovim
+brew install --cask v2rayu
 brew install --cask alacritty
 brew install --cask brave-browser
 brew install --cask visual-studio-code
