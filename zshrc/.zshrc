@@ -135,3 +135,4 @@ update() {
 }
 
 source ~/bmw_bash_scripts/bmw.zshrc
+export PATH="/opt/homebrew/bin:$PATH"
