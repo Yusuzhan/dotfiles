@@ -86,8 +86,8 @@ require("lazy").setup({
 		config = function()
 			local configs = require("nvim-treesitter.configs")
 			configs.setup({
-				ensure_installed = { "lua", "markdown", "bash" },
-				auto_install = true,
+				ensure_installed = { "markdown" },
+				auto_install = false,
 				sync_install = false,
 				highlight = { enable = true },
 				indent = { enable = false },
