@@ -60,8 +60,8 @@ ln -sf $DOTFILES_DIR/alacritty/alacritty.toml $CONFIG_DIR/alacritty/alacritty.to
 
 # link tmux config
 echo "setting tmux"
-# ln -sf $DOTFILES_DIR/tmux.conf/.tmux.conf $HOME/.tmux.conf
-tmux source $DOTFILES_DIR/tmux.conf/.tmux.conf
+ln -sf $DOTFILES_DIR/tmux.conf/.tmux.conf $HOME/.tmux.conf
+tmux source $HOME/.tmux.conf
 
 # link sxhkd config
 echo "setting sxhkd"
