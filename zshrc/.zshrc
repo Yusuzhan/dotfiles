@@ -134,5 +134,5 @@ update() {
 				python3 $HOME/mynote/forcePush/github-cli.py update $0
 }
 
-source ~/bmw_bash_scripts/bmw.zshrc
+source ~/bmwconfig/bmw.sh
 export PATH="/opt/homebrew/bin:$PATH"
