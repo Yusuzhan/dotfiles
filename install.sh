@@ -16,6 +16,7 @@ echo "OS: $os"
 
 DOTFILES_DIR="$HOME/dotfiles"
 CONFIG_DIR="$HOME/.config"
+OH_MY_ZSH="$HOME/.oh-my-zsh"
 
 # install oh-my-zsh
 if [ -d $HOME/.oh-my-zsh ]; then
@@ -42,7 +43,7 @@ else
 fi
 
 # link neovim settings
-echo "setting neovim"
+echo "[neovim] update config"
 if ! [ -d $CONFIG_DIR ]; then
     mkdir $CONFIG_DIR
 fi
@@ -50,25 +51,26 @@ fi
 ln -sf $DOTFILES_DIR/nvim $CONFIG_DIR/nvim 
 
 # link .zshrc
-echo "setting zshrc"
+echo "[zshrc] update config "
 ln -sf $DOTFILES_DIR/zshrc/.zshrc $HOME/.zshrc
 
 # link alacritty config
-echo "setting Alacritty"
+echo "[Alacritty] update config "
 mkdir -p $CONFIG_DIR/alacritty/
 ln -sf $DOTFILES_DIR/alacritty/alacritty.toml $CONFIG_DIR/alacritty/alacritty.toml
 
 # link tmux config
-echo "setting tmux"
+echo "[tmux] update config "
 ln -sf $DOTFILES_DIR/tmux.conf/.tmux.conf $HOME/.tmux.conf
 tmux source $HOME/.tmux.conf
 
 # link sxhkd config
-echo "setting sxhkd"
+echo "[sxhkd] update config "
 mkdir -p $CONFIG_DIR/sxhkd
 ln -sf $DOTFILES_DIR/sxhkd/sxhkdrc $CONFIG_DIR/sxhkd/sxhkdrc
 
 # link conky config
-echo "setting conky"
+echo "[conky] update config "
 mkdir -p $CONFIG_DIR/conky
 ln -sf $DOTFILES_DIR/conky/conky.conf $CONFIG_DIR/conky/conky.conf
+
