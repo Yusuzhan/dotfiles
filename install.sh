@@ -50,6 +50,14 @@ fi
  
 ln -sf $DOTFILES_DIR/nvim $CONFIG_DIR/nvim 
 
+# install powerlevel10k theme
+if ! [ -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k ]; then
+    echo "[powerlevel10k] installing theme for zsh"
+	  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+else
+    echo "[powerlevel10k] already installed"
+fi
+
 # link .zshrc
 echo "[zshrc] update config "
 ln -sf $DOTFILES_DIR/zshrc/.zshrc $HOME/.zshrc
