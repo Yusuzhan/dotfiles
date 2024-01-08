@@ -147,12 +147,3 @@ export PATH="/opt/homebrew/bin:$PATH"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-V2RAY_URL=socks5://127.0.0.1:1080
-export http_proxy=${V2RAY_URL}
-export https_proxy=${V2RAY_URL}
-export HTTP_PROXY=${V2RAY_URL}
-export HTTPS_PROXY="${V2RAY_URL}"
-export http_proxy="${V2RAY_URL}"
-export https_proxy="${V2RAY_URL}"
-export no_proxy="localhost,127.0.0.1,.cn.sub,.bmwgroup.net"
-
