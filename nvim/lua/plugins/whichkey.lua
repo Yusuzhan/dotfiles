@@ -82,7 +82,7 @@ local mappings = {
 	["<space>"] = { "<cmd>lua print('hello world')<cr>", "HELLO" },
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
 	["b"] = {
-		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+		"<cmd>lua require('telescope.builtin').buffers()<cr>",
 		"Buffers",
 	},
 	["e"] = { "<cmd>Neotree reveal<cr>", "Explorer" },
@@ -91,7 +91,7 @@ local mappings = {
 	["c"] = { "<cmd>bd<CR>", "Close Buffer" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["f"] = {
-		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+		"<cmd>lua require('telescope.builtin').find_files()<cr>",
 		"Find files",
 	},
 	-- ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
