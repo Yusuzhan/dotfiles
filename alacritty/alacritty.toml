@@ -5,12 +5,14 @@ import = ["$HOME/dotfiles/alacritty/dracula.toml"]
 #text = "CellBackground"
 
 [font]
-builtin_box_drawing = true
-size = 16
+#builtin_box_drawing = true
+size = 13
 
 [font.bold]
 style = "Bold"
 
 [font.normal]
-family = "IosevkaTerm Nerd Font Propo"
+family = "IosevkaTermNerdFontPropo"
+#family = "MesloLGSNerdFont"
+#family = "FiraCodeNerdFont"
 style = "SemiBold"
