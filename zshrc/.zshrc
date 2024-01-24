@@ -130,6 +130,18 @@ export no_proxy="localhost,127.0.0.1,.cn.sub,.bmwgroup.net"
 mv ~/.ssh/config ~/.ssh/config.bak
 "
 
+alias androidproxy="
+V2RAY_URL=socks5://192.168.0.192:10808
+export http_proxy=${V2RAY_URL}
+export https_proxy=${V2RAY_URL}
+export HTTP_PROXY=${V2RAY_URL}
+export HTTPS_PROXY="${V2RAY_URL}"
+export http_proxy="${V2RAY_URL}"
+export https_proxy="${V2RAY_URL}"
+export no_proxy="localhost,127.0.0.1,.cn.sub,.bmwgroup.net"
+mv ~/.ssh/config ~/.ssh/config.bak
+"
+
 alias unproxy="
 unset http_proxy
 unset https_proxy
@@ -146,4 +158,19 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+if [[ $OS == "macOS" ]]; then
+  export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+  export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
+  # Android Tools
+	export ANDROID_HOME=$HOME/Library/Android/sdk
+  export PATH=$PATH:$ANDROID_HOME/platform-tools
+  export PATH=$PATH:$ANDROID_HOME/tools
+  export PATH=$PATH:$ANDROID_HOME/tools/bin
+  #export PATH=$PATH:$ANDROID_HOME/emulator
+	# OpenJdk 17 installed by homebrew
+	export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+	export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
+fi
 
