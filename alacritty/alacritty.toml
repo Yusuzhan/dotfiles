@@ -6,13 +6,14 @@ import = ["$HOME/dotfiles/alacritty/dracula.toml"]
 
 [font]
 #builtin_box_drawing = true
-size = 13
+size = 15
 
 [font.bold]
-style = "Bold"
+style = "Heavy"
 
 [font.normal]
-family = "IosevkaTermNerdFontPropo"
+#family = "IosevkaTermNerdFont"
+family = "IosevkaTerm Nerd Font Propo"
 #family = "MesloLGSNerdFont"
 #family = "FiraCodeNerdFont"
 style = "SemiBold"
