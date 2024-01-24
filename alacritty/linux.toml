@@ -6,7 +6,7 @@ import = ["$HOME/dotfiles/alacritty/dracula.toml"]
 
 [font]
 builtin_box_drawing = true
-size = 15
+size = 13
 
 [font.bold]
 style = "Heavy"

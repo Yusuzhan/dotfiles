@@ -65,7 +65,11 @@ ln -sf $DOTFILES_DIR/zshrc/.zshrc $HOME/.zshrc
 # link alacritty config
 echo "[Alacritty] update config "
 mkdir -p $CONFIG_DIR/alacritty/
-ln -sf $DOTFILES_DIR/alacritty/alacritty.toml $CONFIG_DIR/alacritty/alacritty.toml
+if [[ $OS == "macOS" ]]; then
+  ln -sf $DOTFILES_DIR/alacritty/macos.toml $CONFIG_DIR/alacritty/alacritty.toml
+else
+  ln -sf $DOTFILES_DIR/alacritty/linux.toml $CONFIG_DIR/alacritty/alacritty.toml
+fi
 
 # link tmux config
 echo "[tmux] update config "
