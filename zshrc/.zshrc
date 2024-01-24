@@ -150,16 +150,16 @@ unset HTTPS_PROXY
 "
 
 update() {
-				python3 $HOME/mynote/forcePush/github-cli.py update $0
+  python3 $HOME/mynote/forcePush/github-cli.py update $0
 }
 
-source ~/bmwconfig/bmw.sh
-export PATH="/opt/homebrew/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 if [[ $OS == "macOS" ]]; then
+  export PATH="/opt/homebrew/bin:$PATH"
+  source ~/bmwconfig/bmw.sh
   export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
   export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
   export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
