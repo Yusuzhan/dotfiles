@@ -12,10 +12,12 @@ M.config = function()
 	lspconfig.bashls.setup {}
 	-- clangd
 	lspconfig.clangd.setup {}
-
+	-- dart lsp
 	lspconfig.dartls.setup {
 		cmd = { "dart", 'language-server', '--protocol=lsp' }
 	}
+	-- typescript lsp
+	lspconfig.tsserver.setup {}
 
 	-- Use LspAttach autocommand to only map the following keys
 	-- after the language server attaches to the current buffer
