@@ -18,6 +18,8 @@ M.config = function()
 	}
 	-- typescript lsp
 	lspconfig.tsserver.setup {}
+	-- jq
+	lspconfig.jsonls.setup {}
 
 	-- Use LspAttach autocommand to only map the following keys
 	-- after the language server attaches to the current buffer
