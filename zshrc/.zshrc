@@ -118,16 +118,42 @@ source $ZSH/oh-my-zsh.sh
 alias vi=nvim
 alias vim=nvim
 
+alias yray="
+V2RAY_URL=socks5://localhost:8043
+export http_proxy=${V2RAY_URL}
+export https_proxy=${V2RAY_URL}
+export socks_proxy=${V2RAY_URL}
+export HTTP_PROXY=${V2RAY_URL}
+export HTTPS_PROXY="${V2RAY_URL}"
+export SOCKS_PROXY=${V2RAY_URL}
+export no_proxy="localhost,127.0.0.1,.cn.sub,.bmwgroup.net"
+mv ~/.ssh/config ~/.ssh/config.bak
+echo $http_proxy
+"
+
+alias v2rayhttp="
+V2RAY_URL=http://127.0.0.1:2087
+export http_proxy=${V2RAY_URL}
+export https_proxy=${V2RAY_URL}
+export socks_proxy=${V2RAY_URL}
+export HTTP_PROXY=${V2RAY_URL}
+export HTTPS_PROXY="${V2RAY_URL}"
+export SOCKS_PROXY=${V2RAY_URL}
+export no_proxy="localhost,127.0.0.1,.cn.sub,.bmwgroup.net"
+mv ~/.ssh/config ~/.ssh/config.bak
+"
+
 alias v2ray="
 V2RAY_URL=socks5://127.0.0.1:1080
 export http_proxy=${V2RAY_URL}
 export https_proxy=${V2RAY_URL}
+export socks_proxy=${V2RAY_URL}
 export HTTP_PROXY=${V2RAY_URL}
 export HTTPS_PROXY="${V2RAY_URL}"
-export http_proxy="${V2RAY_URL}"
-export https_proxy="${V2RAY_URL}"
+export SOCKS_PROXY=${V2RAY_URL}
 export no_proxy="localhost,127.0.0.1,.cn.sub,.bmwgroup.net"
 mv ~/.ssh/config ~/.ssh/config.bak
+echo $http_proxy
 "
 
 alias androidproxy="
@@ -172,6 +198,14 @@ if [[ $OS == "macOS" ]]; then
 	# OpenJdk 17 installed by homebrew
 	export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 	export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
+
+	# bmw translation tool
+	export PATH="$PATH":"$HOME/.pub-cache/bin"
+	export OHPM_HOME=/Users/QXZ3LB2/Library/Huawei/ohpm
+	export PATH=$OHPM_HOME/bin:$PATH
+  export NODE_HOME=/Users/QXZ3LB2/.volta
+	export PATH=$OHPM_HOME/bin:$PATH
+
 fi
 
 if [[ $OS == "Arch" ]]; then
@@ -181,4 +215,5 @@ if [[ $OS == "Arch" ]]; then
   export PATH=$PATH:$ANDROID_HOME/tools
   export PATH=$PATH:$ANDROID_HOME/tools/bin
 fi
+
 
