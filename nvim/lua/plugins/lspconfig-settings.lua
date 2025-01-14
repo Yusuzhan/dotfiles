@@ -17,7 +17,7 @@ M.config = function()
 		cmd = { "dart", 'language-server', '--protocol=lsp' }
 	}
 	-- typescript lsp
-	lspconfig.tsserver.setup {}
+	lspconfig.ts_ls.setup {}
 	-- jq
 	lspconfig.jsonls.setup {}
 

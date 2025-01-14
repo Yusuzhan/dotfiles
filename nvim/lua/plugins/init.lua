@@ -14,11 +14,7 @@ require("lazy").setup({
 	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
-		init = function()
-			vim.o.timout = true
-			vim.o.timoutlen = 300
-		end,
-		lazy = true,
+   	lazy = true,
 		config = function()
 			require("plugins.whichkey")
 		end,
