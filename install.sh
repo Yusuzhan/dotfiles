@@ -1,5 +1,5 @@
 #!/bin/bash
-os=""
+os="Ubuntu"
 unameOut="$(uname -a)"
 if [[ "$unameOut" == *"Linux"* ]]; then
 				osRelease="$(cat /etc/os-release)"
