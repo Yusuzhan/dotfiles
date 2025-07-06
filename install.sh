@@ -76,13 +76,13 @@ echo "[tmux] update config "
 ln -sf $DOTFILES_DIR/tmux.conf/.tmux.conf $HOME/.tmux.conf
 tmux source $HOME/.tmux.conf
 
-# link sxhkd config
-echo "[sxhkd] update config "
-mkdir -p $CONFIG_DIR/sxhkd
-ln -sf $DOTFILES_DIR/sxhkd/sxhkdrc $CONFIG_DIR/sxhkd/sxhkdrc
+# link sxhkd config, this is for Arch Linux only
+# echo "[sxhkd] update config "
+# mkdir -p $CONFIG_DIR/sxhkd
+# ln -sf $DOTFILES_DIR/sxhkd/sxhkdrc $CONFIG_DIR/sxhkd/sxhkdrc
 
 # link conky config
-echo "[conky] update config "
-mkdir -p $CONFIG_DIR/conky
-ln -sf $DOTFILES_DIR/conky/conky.conf $CONFIG_DIR/conky/conky.conf
+# echo "[conky] update config "
+# mkdir -p $CONFIG_DIR/conky
+# ln -sf $DOTFILES_DIR/conky/conky.conf $CONFIG_DIR/conky/conky.conf
 
