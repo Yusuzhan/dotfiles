@@ -60,7 +60,11 @@ fi
 
 # link .zshrc
 echo "[zshrc] update config "
-ln -sf $DOTFILES_DIR/zshrc/.zshrc $HOME/.zshrc
+if [[ $OS == "macOS" ]]; then
+    ln -sf $DOTFILES_DIR/zshrc/.zshrc.macos $HOME/.zshrc
+else
+    ln -sf $DOTFILES_DIR/zshrc/.zshrc.linux $HOME/.zshrc
+fi
 
 # link alacritty config
 echo "[Alacritty] update config "
