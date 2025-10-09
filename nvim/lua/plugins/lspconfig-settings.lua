@@ -3,23 +3,24 @@ local M = {
 }
 
 M.config = function()
-	local lspconfig = require('lspconfig')
+	-- local lspconfig = require('lspconfig')
 	-- lua lsp
-	lspconfig.lua_ls.setup {}
+	vim.lsp.config('lua_ls', {})
 	-- python lsp
-	lspconfig.pylsp.setup {}
+	vim.lsp.config('pylsp', {})
 	-- bash
-	lspconfig.bashls.setup {}
+	vim.lsp.config('bashls', {})
+	vim.lsp.enable('bashls')
 	-- clangd
-	lspconfig.clangd.setup {}
+	vim.lsp.config('clangd', {})
 	-- dart lsp
-	lspconfig.dartls.setup {
+	vim.lsp.config('dartls', {
 		cmd = { "dart", 'language-server', '--protocol=lsp' }
-	}
+	})
 	-- typescript lsp
-	lspconfig.ts_ls.setup {}
+	vim.lsp.config('ts_ls', {})
 	-- jq
-	lspconfig.jsonls.setup {}
+	vim.lsp.config('jsonls', {})
 
 	-- Use LspAttach autocommand to only map the following keys
 	-- after the language server attaches to the current buffer

@@ -16,6 +16,7 @@ wk.add({ -- buffer --
 		desc = "Find File",
 		mode = "n"
 	}, -- search text --
+  -- to make live grep working, install ripgrep, e.g. brew install ripgrep
 	{
 		"<leader>F",
 		"<cmd>Telescope live_grep<cr>",
