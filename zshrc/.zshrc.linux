@@ -121,13 +121,13 @@ export PATH="$HOME/bin:$PATH"
 alias vi=nvim
 
 alias v2ray="
-export http_proxy=http://127.0.0.1:10808
-export https_proxy=http://127.0.0.1:10808
-export all_proxy=socks5://127.0.0.1:10808
+export http_proxy=http://127.0.0.1:1087
+export https_proxy=http://127.0.0.1:1087
+export all_proxy=socks5://127.0.0.1:1080
 
-export HTTP_PROXY=http://127.0.0.1:10808
-export HTTPS_PROXY=http://127.0.0.1:10808
-export ALL_PROXY=socks5://127.0.0.1:10808
+export HTTP_PROXY=http://127.0.0.1:1087
+export HTTPS_PROXY=http://127.0.0.1:1087
+export ALL_PROXY=socks5://127.0.0.1:1080
 echo $http_proxy
 "
 
