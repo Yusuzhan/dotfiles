@@ -18,6 +18,13 @@ DOTFILES_DIR="$HOME/dotfiles"
 CONFIG_DIR="$HOME/.config"
 OH_MY_ZSH="$HOME/.oh-my-zsh"
 
+# set repeat key for Android Studio
+if [[ $OS == "macOS" ]]; then
+  defaults write com.google.android.studio ApplePressAndHoldEnabled -bool false
+fi
+
+
+
 # install oh-my-zsh
 if [ -d $HOME/.oh-my-zsh ]; then
     echo '[oh-my-zsh] already installed'
