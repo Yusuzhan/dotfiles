@@ -82,7 +82,7 @@ require("lazy").setup({
 		config = function()
 			local configs = require("nvim-treesitter.configs")
 			configs.setup({
-				ensure_installed = { "markdown" },
+				ensure_installed = { "markdown", "markdown_inline", "bash", "python", "lua", "kotlin", "groovy" },
 				auto_install = false,
 				sync_install = false,
 				highlight = { enable = true },

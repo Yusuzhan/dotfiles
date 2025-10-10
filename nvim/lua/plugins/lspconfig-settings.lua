@@ -21,6 +21,11 @@ M.config = function()
 	vim.lsp.config('ts_ls', {})
 	-- jq
 	vim.lsp.config('jsonls', {})
+	-- Kotlin lsp
+	vim.lsp.config('kotlin-lsp', {
+    filetypes = {"kotlin", "kt", "kts"}
+	})
+	vim.lsp.enable('kotlin-lsp')
 
 	-- Use LspAttach autocommand to only map the following keys
 	-- after the language server attaches to the current buffer
