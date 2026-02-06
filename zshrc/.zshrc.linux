@@ -161,4 +161,5 @@ export PATH="$PATH:/home/suzhan/.local/bin"
 export PATH="/Users/yusuzhan/.codebuddy/bin:$PATH"
 export PATH="$PATH:/Users/yusuzhan/workspace/png-converter"
 
+# Put this in the end, this is Starship them for zsh
 eval "$(starship init zsh)"

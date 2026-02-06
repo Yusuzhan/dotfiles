@@ -1,0 +1,27 @@
+#format = """$character"""
+right_format = """$java"""
+
+[directory]
+truncation_length = 6
+truncate_to_repo = false
+
+[gradle]
+format = '[\[${symbol}(${version})\] ]($style)'
+version_format = '${raw}'
+symbol = 'G'
+
+[java]
+format = '[\[${symbol}(${version})\] ]($style)'
+version_format = '${raw}'
+style = 'bold red'
+
+[kotlin]
+format = '[\[${symbol}(${version})\] ]($style)'
+version_format = '${raw}'
+symbol = 'Kt'
+
+
+[python]
+format = '[\[${symbol}(${version})\] ]($style)'
+version_format = '${raw}'
+# symbol = 'Py'
