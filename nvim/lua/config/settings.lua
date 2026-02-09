@@ -9,10 +9,10 @@ vim.opt.cursorline = true
 vim.opt.signcolumn = "yes"
 -- right color line
 vim.opt.colorcolumn = "120"
--- indent char
-vim.opt.tabstop = 2
--- vim.opt.autoindent = true
--- vim.opt.smartindent = true
+-- indent settings
+vim.opt.tabstop = 2        -- tab 显示为 2 空格
+vim.opt.shiftwidth = 2     -- 缩进级别
+vim.opt.expandtab = true   -- 用空格代替 tab
 vim.opt.swapfile = false
 vim.opt.guicursor = ""
 -- use system clipboard

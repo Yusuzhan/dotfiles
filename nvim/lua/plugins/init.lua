@@ -69,12 +69,9 @@ require("lazy").setup({
 		},
 		version = '^1.0.0', -- optional: only update when a new 1.x version is released
 	},
-	{
-		require("plugins.lspconfig-settings"),
-	},
-	{
-		require("plugins.nvim-cmp-settings"),
-	},
+	require("plugins.lspconfig-settings"),
+	require("plugins.nvim-cmp-settings"),
+	require("plugins.conform-settings"),
 	-- highlight
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -86,7 +83,7 @@ require("lazy").setup({
 				auto_install = false,
 				sync_install = false,
 				highlight = { enable = true },
-				indent = { enable = false },
+				indent = { enable = true },
 			})
 		end
 	},
